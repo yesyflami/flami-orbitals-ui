@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flami Orbitals UI"
+  short_description: "Turn a photo or theme into an Orbitals-style 80s cel-anime game screen"
+  default_prompt: "Use $flami-orbitals-ui to turn this subject into an Orbitals (轨道双子星) style game-screen illustration."
