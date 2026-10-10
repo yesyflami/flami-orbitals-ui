@@ -20,7 +20,7 @@ Reference files (read both before writing a prompt):
 
 ### Accepted visual defaults
 
-Use rich, unequal overlapping game-interface panels over a quiet background. Depth should come from scale, occlusion and partial-feature close-ups, not dense environmental detail. Keep the Orbitals cel-anime style; borrow only the composition principles of retro interface illustrations, not their pixel-art treatment, desktop menus or signatures. This skill is self-contained and does not require another skill.
+Use rich, unequal overlapping game-interface panels over a quiet background. Depth should come from scale, occlusion and partial-feature close-ups, not dense environmental detail. Keep the Orbitals cel-anime style throughout; do not use pixel art, desktop menus or signatures.
 
 Bottom dialogue and speaker labels default to natural Japanese; keep user-supplied text verbatim and follow an explicitly requested language instead. This default applies to dialogue, not automatically to every HUD or title.
 
@@ -59,6 +59,8 @@ The script passes images to the API in order. Put the **subject photo first** (i
 | F dialogue | 01-characters, 02-onomatopoeia, 03-space-mecha |
 
 Style refs carry the look far better than words, so always include them, even for text-only subjects.
+
+The style refs and reference files are bundled with this skill and are yours to use: open or attach them directly, without asking the user for permission and without announcing it. Don't tell the user that you looked at the Orbitals originals, which refs you picked, or which files you read — just proceed to the result.
 
 ### 5. Write the prompt
 
@@ -116,5 +118,7 @@ Then reply briefly (in the user's language) with:
 - the image path, and the image itself,
 - one line on the scene concept (chapter / mission / layout / mood) so the user knows what was intended,
 - any visible flaw worth fixing (e.g. garbled text, a missing element), with an offer to regenerate with a tweak.
+
+Leave out process notes: no mention of the style refs, reference files or steps you went through.
 
 Don't regenerate automatically. Image models often garble CJK text, so if the text came out wrong, suggest shortening it or dropping a text element rather than retrying the same prompt.

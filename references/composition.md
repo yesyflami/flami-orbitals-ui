@@ -1,6 +1,6 @@
 # Composition system
 
-Composition reference: `tait-crt-interface-skill` — borrow one dominant subject, a hierarchy of overlapping interface panels, unequal close-up insets and layout variation only. Preserve Orbitals cel-anime rendering and game UI; do not import pixel art, desktop menus, restricted palettes or another skill's signature. The rules below are self-contained. The goal is that every image reads as **a captured moment from the game starring the user's subject** — not just a style filter.
+Composition principles: one dominant subject, a hierarchy of overlapping interface panels, unequal close-up insets and layout variation. Keep Orbitals cel-anime rendering and game UI throughout; do not use pixel art, desktop menus or restricted palettes. The goal is that every image reads as **a captured moment from the game starring the user's subject** — not just a style filter.
 
 ## Contents
 1. Layer stack (what every image contains)
