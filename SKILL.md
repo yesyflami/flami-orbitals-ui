@@ -18,6 +18,12 @@ Reference files (read both before writing a prompt):
 
 ## Workflow
 
+### Accepted visual defaults
+
+Use rich, unequal overlapping game-interface panels over a quiet background. Depth should come from scale, occlusion and partial-feature close-ups, not dense environmental detail. Keep the Orbitals cel-anime style; borrow only the composition principles of retro interface illustrations, not their pixel-art treatment, desktop menus or signatures. This skill is self-contained and does not require another skill.
+
+Bottom dialogue and speaker labels default to natural Japanese; keep user-supplied text verbatim and follow an explicitly requested language instead. This default applies to dialogue, not automatically to every HUD or title.
+
 ### 1. Read the request
 
 Find:
@@ -33,9 +39,11 @@ If there is a source image, look at it once and note **3–5 identity anchors pe
 ### 3. Build the scene concept and recipe
 
 Follow `composition.md` §2–§5:
-- Invent the mini-story: chapter title (JP + CN), mission HUD, one dialogue line, 3–5 subject-specific enrichment elements.
+- Invent the mini-story: chapter title (JP + CN), mission HUD, one short Japanese dialogue line, and 1–3 restrained subject-specific world details. Functional interface panels may carry additional story details.
 - Pick one value per variation axis. Fit the archetype to the subject (a dramatic pet → cut-in; an object → item-get; two people → split-screen; a portrait → main-menu or dialogue). If you already made images in this conversation, change at least two high-impact axes so outputs don't repeat.
 - Run the preflight checklist.
+
+For the default rich composition, select 4–5 unequal panels including 1–2 partial-feature close-ups. Use 3 for a tighter crop and at most 6 when space permits. Specify panel positions, overlaps and calm background regions using composition.md; do not copy the soccer example onto unrelated subjects.
 
 ### 4. Choose reference images
 
@@ -68,7 +76,7 @@ Image 1 is the subject to redraw (identity reference only — do not keep its ph
 <archetype layout in concrete positions: what is top-left, centre band, lower third, right edge; frame type (letterbox / split / full-bleed); mood palette with hex colours; calm space>
 
 [Enrichment & FX]
-<the 3–5 world elements and where they sit; the FX family and how it touches the hero; the 1–2 insets: frame colour, position, what partial feature each shows>
+<1–3 quiet world details; one localized FX family; 3–6 unequal overlapping panels including 1–2 partial-feature close-ups, each with a subject-relevant function; specify clean negative space and what stays visually subdued>
 
 [Typography]
 <each text element: exact string in quotes, position, look from style-guide §3>
@@ -102,7 +110,7 @@ python3 SKILL_DIR/scripts/generate.py --prompt-file ./orbitals-art/<slug>.txt \
 
 ### 7. Check and deliver
 
-Open the result and compare it with the preflight checklist: is the hero recognisable through its anchors, is it clearly 80s cel anime (not a filtered photo), are the composition layers there, is the text legible?
+Open the result and compare it with the preflight checklist: is the hero recognisable through its anchors, is it clearly 80s cel anime (not a filtered photo), are unequal interface layers clearly overlapping, is the background calm rather than filled with stars/debris/architecture, is the text legible, and is the bottom dialogue Japanese unless the user requested otherwise?
 
 Then reply briefly (in the user's language) with:
 - the image path, and the image itself,

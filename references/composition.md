@@ -1,6 +1,6 @@
 # Composition system
 
-Borrowed structure from `tait-crt-interface-skill` (one dominant subject + a hierarchy of overlapping interface layers + unequal close-up insets + a variation engine), re-skinned with the Orbitals game-screen vocabulary. The goal is that every image reads as **a captured moment from the game starring the user's subject** — not just a style filter.
+Composition reference: `tait-crt-interface-skill` — borrow one dominant subject, a hierarchy of overlapping interface panels, unequal close-up insets and layout variation only. Preserve Orbitals cel-anime rendering and game UI; do not import pixel art, desktop menus, restricted palettes or another skill's signature. The rules below are self-contained. The goal is that every image reads as **a captured moment from the game starring the user's subject** — not just a style filter.
 
 ## Contents
 1. Layer stack (what every image contains)
@@ -18,15 +18,15 @@ Build the frame from back to front:
 
 | # | Layer | Rule |
 |---|---|---|
-| 1 | **Painted world** | Background scene in the chosen mood palette. Must contain 2–4 *world details* (pipes, cables, asteroids, overgrown machinery, starfield, control panels) so the frame feels inhabited. |
+| 1 | **Painted world** | Background scene in the chosen mood palette. Use 1–3 subdued, subject-relevant world details. Prefer broad painted colour fields, a simple ground plane and one low-contrast distant silhouette. Keep the setting readable without filling it with texture. |
 | 2 | **Hero** | Exactly one hero composition — the user's subject, or the anchored group as one unit. Covers **55–75%** of the frame (never below 45% after overlaps). Placed off-centre. Never boxed inside a frame or window. |
-| 3 | **World enrichment** | 3–5 secondary story elements that did not exist in the source, chosen to *extend the subject's identity into the game world* (see §2). Smaller than the hero, distributed across at least two quadrants. |
-| 4 | **FX** | One dominant FX family (speed lines, radial burst, hyperspace streaks, neon beam, sparkle stars, floating debris, explosion). It must interact with the hero (radiate from, frame, or trail behind it). |
-| 5 | **Close-up insets** | 1–2 portrait cards (rounded square, folder-tab corner, blue frame for P1 / salmon frame for P2, small name label at bottom). Each shows a *partial distinctive element* — a reaction face, the signature accessory, a paw, an eye behind glasses. Never a second full copy of the hero. With two insets, give them different sizes and different crops. |
+| 3 | **World enrichment** | 1–3 restrained story details that extend the subject into the game world (see §2). Additional narrative information belongs in functional panels rather than extra floating props. Keep world details smaller and lower-contrast than the hero. |
+| 4 | **FX** | One localized FX family connected to the action. Default to a few purposeful trails or one restrained burst; do not combine all-over speed lines, floating debris, dust sprays and sparkles. |
+| 5 | **Close-up insets** | 1–2 unequal partial-feature cards within a total of 3–6 interface panels (default 4–5). Use retro game frames with corner tabs, cream/navy edges and blue/salmon accents. Each shows a *partial distinctive element* — a reaction face, the signature accessory, a paw, an eye behind glasses. Never a second full copy of the hero. With two insets, give them different sizes and different crops. |
 | 6 | **Typography & HUD** | 2–5 text elements from style-guide §3: exactly one *big type device* (chapter title / onomatopoeia / item title / logo), plus 1–4 small ones (dialogue subtitle, quest HUD, buttons, P1/P2 badges, counter). |
 | 7 | **Screen surface** | Grain, chromatic aberration, bloom, vignette; optional letterbox. |
 
-Hierarchy: Hero (L) > big type device (L/M) > insets & enrichment (M/S) > HUD (S). Overlap layers by 5–20%: the big title may cross in front of the hero's body but must never cover the face; insets may overlap the hero's edge. Keep **15–25% calm space** (sky, starfield, flat red field, letterbox) so the frame breathes.
+Hierarchy: Hero (L) > big type device (L/M) > insets & enrichment (M/S) > HUD (S). Overlap layers by 5–20%: the big title may cross in front of the hero's body but must never cover the face; insets may overlap the hero's edge. Keep **25–35% connected calm space** (sky, starfield, flat red field, letterbox) so the frame breathes.
 
 ## 2. Scene concept (do this before writing the prompt)
 
@@ -34,8 +34,8 @@ Invent a tiny game moment around the subject. Answer in one line each:
 
 - **Chapter**: a 2–5 character Japanese title + Chinese translation that puns on the subject. (cat → 「猫の惑星」/「猫之星」; coffee cup → 「目覚めの炉」/「苏醒熔炉」)
 - **Mission**: quest HUD text, e.g. 「找回逃跑的毛线球」/「◇ 已收集毛线 2/5」
-- **Line**: one dialogue line ≤ 20 characters with a speaker name — funny, in-character, Chinese.
-- **Enrichment**: 3–5 world elements that translate the subject's traits into Orbitals objects. Good enrichment is *specific to the subject*:
+- **Line**: one short natural Japanese dialogue line (aim for ≤ 20 characters) with a Japanese speaker label. Match the subject and tone. Preserve exact user wording or a requested language instead; do not reuse a fixed line across subjects.
+- **Enrichment**: 1–3 quiet world details plus subject-relevant panel functions that translate the subject's traits into Orbitals objects. These are options, not a checklist to accumulate. Good enrichment is *specific to the subject*:
   - a dog → floating bone-shaped asteroid, scout pod with dog ears, a paw-print on the airlock
   - a person with a camera → camera turned into a chunky retro-future device with glowing lens, film strips drifting like debris, a teal scout pod photobombing
   - a city skyline → buildings as overgrown orbital towers with cables, the three-lamp scout pod flying past
@@ -49,7 +49,7 @@ Choose one. Each names a layout that actually appears in the game.
 
 **A. 章节标题卡 Chapter card** — cinematic letterbox; hero in a deep painted environment at 55–65%; giant white Japanese title across the centre band crossing the hero's body (not face); small Chinese subtitle beneath; dialogue subtitle in lower third; one inset bottom-right. Best moods: ruins, furnace, aurora.
 
-**B. 角色切入 Cut-in** — diagonal split: a giant dramatic reaction face of the hero (cut-in, top-left to centre, cel-shaded in a duotone of the mood) above an action shot of the hero (lower-right) with a neon beam or explosion; heavy speed lines; huge vertical onomatopoeia on one side; quest HUD top-left. Best moods: warp neon, furnace.
+**B. 角色切入 Cut-in** — diagonal split: a giant dramatic reaction face of the hero (cut-in, top-left to centre, cel-shaded in a duotone of the mood) above an action shot of the hero (lower-right) with a neon beam or explosion; localized speed lines; huge vertical onomatopoeia on one side; quest HUD top-left. Best moods: warp neon, furnace.
 
 **C. 道具获得 Item get** — radial white/pale-blue burst behind the hero's signature object or the hero holding it, on a painted orange-flame or golden-swirl field; red katakana item title arched at top with Chinese label; dialogue subtitle bottom-left; one inset. Optional duplicated split-screen (two identical halves) like the game's co-op view. Best moods: furnace, golden vortex.
 
@@ -58,6 +58,15 @@ Choose one. Each names a layout that actually appears in the game.
 **E. 主菜单 Main menu** — crimson flat diagonal panel on the left 35–45% holding 3 menu pills (the selected one blue and glowing); hero on the right in a starfield/aurora or painted scene; slanted logo-style title over the hero's area; P1/P2 badges top-right; button prompts bottom-right. Best moods: red menu, aurora.
 
 **F. 对话特写 Dialogue close-up** — over-the-shoulder: a large out-of-focus back-of-head/shoulder of a supporting character in the foreground (left 30%), hero facing camera mid-ground at 50–60% with a strong expression; control-room panels with LEDs behind; dialogue subtitle centred bottom; one small inset. Best moods: control room, red menu.
+
+### Interface depth and background restraint
+
+- Default to 4–5 panels in an asymmetric L, staggered zigzag or counter-corner layout. Use a clear size hierarchy such as 1 large + 1 medium + 3 small, with different aspect ratios and 5–20% overlap at selected edges. Avoid equal tiles, rigid columns and uniformly separated cards.
+- Count the 1–2 partial-feature close-ups inside the total panel count. Crop different distinctive details (eyes/accessory/paw/tool), never repeat a full figure. Other panels serve the subject: an action gauge, map, object readout or mission status, not arbitrary decoration. Compact labels and diagrams need not add more narrative text blocks.
+- Keep the hero unboxed and dominant, with face and defining action unobscured. Some panel edges can overlap the hero silhouette; a small prop may pass behind an edge. Use scale and occlusion for depth before adding foreground scenery.
+- Keep the background low contrast and low detail. Avoid dense stars, detailed planets, crowds, layered machinery, rubble, dust sprays and oversized foreground consoles by default. These may be used selectively if central to the user’s subject, never all together. Fine film grain must not become visible dirt or speckle clutter.
+- If the result is busy, simplify the background and FX first while retaining the useful window hierarchy. If flat, improve panel size differences, overlap and feature crops before adding objects.
+- Adapt to each image: a pet may use paw/ear details and a route map; an object may use a material detail and a function readout. Do not automatically add a football field, shoe crop, charge gauge or space setting to every subject.
 
 ## 4. Variation axes
 
@@ -87,9 +96,11 @@ Pick one value per axis. If earlier images in this conversation used a value, ch
 
 Before compiling the prompt, confirm:
 - [ ] one hero, 55–75%, off-centre, unboxed, face uncovered
-- [ ] 3–5 subject-specific enrichment elements across ≥ 2 quadrants
+- [ ] 1–3 subdued world details; functional panels distributed across multiple quadrants
 - [ ] one FX family touching the hero
 - [ ] 1–2 insets showing partial features, unequal if two
 - [ ] exactly one big type device; total text 2–5; every string short and quoted
-- [ ] 15–25% calm space
+- [ ] 25–35% connected calm space; background and FX are visibly quieter than hero/UI
+- [ ] 3–6 unequal panels with purposeful overlap, including 1–2 distinct partial crops
+- [ ] short natural Japanese bottom dialogue unless user wording/language overrides
 - [ ] identity anchors (3–5 per subject) carried over; everything else redrawn in the 80s cel style

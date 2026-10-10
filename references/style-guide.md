@@ -49,11 +49,13 @@ Text is a core part of the look. Every image gets 2–5 text elements from this 
 | **Logo** | Slanted, angular, sharp-cut katakana with a red four-point star flare crossing it; cream fill. | 「オービタルズ」 |
 | **Onomatopoeia / reaction** | Hand-lettered rounded manga kana, cream-yellow fill #F8D98A, thick dark-brown outline, tilted, stacked vertically, huge. | 「はあ!?」「ドーン」 |
 | **Item-get title** | Bold rounded red katakana with white outline + drop shadow, slight arc; small grey Chinese label below. | 「ジャンプパック」+「喷气背包」 |
-| **Dialogue subtitle** | Lower third, centred or left-aligned. Speaker name in pink-red #F06A7A (or periwinkle blue) on its own line, line text in yellow #F2D45A, rounded gothic, thin dark outline. | 「尾村」/「这个发光的机器究竟是什么东西——？」 |
+| **Dialogue subtitle** | Lower third, centred or left-aligned. Speaker name in pink-red #F06A7A (or periwinkle blue) on its own line, line text in yellow #F2D45A, rounded gothic, thin dark outline. | 「少年」/「この一球、宇宙へ届け！」 (example only; adapt to subject) |
 | **Quest HUD** | Top-left, small white text with soft shadow; second line starts with a yellow ◇ diamond and ends with yellow progress "0/5". | 「启动主电梯」/「◇ 修复故障系统 0/5」 |
 | **Menu / buttons** | Blue rounded-trapezoid pills with outer glow, cream circle button icon ("A", "B") + white label. | 「Ⓐ 开始」「Ⓑ 返回」 |
 | **Player badges** | Top-right: two small rounded squares "P1" (blue) "P2" (grey or blue) with a cream gamepad icon below. | P1 P2 |
 | **Big counter** | Single white digit in a red square plate, or a 7-segment-style LED readout "000.0" on a pastel device. | 「3」 |
+
+Dialogue language: default bottom dialogue and speaker labels to Japanese. Other HUD/title languages follow the chosen design; preserve any exact user text and explicit language request.
 
 Text rules: keep each string short (titles ≤ 5 characters, dialogue ≤ 20 characters) because image models garble long CJK strings. Always put the exact text in quotes in the prompt.
 
@@ -61,7 +63,7 @@ Text rules: keep each string short (titles ≤ 5 characters, dialogue ≤ 20 cha
 
 Applied over the whole frame — this is what makes it feel like a capture of a game, not a clean illustration:
 
-- visible fine **film grain**, slightly heavier in shadows
+- subtle fine **film grain**, slightly heavier in shadows; never dense speckles, dirt or debris
 - light **chromatic aberration** (red/cyan fringe) on high-contrast edges and text
 - **halation / bloom** around light sources and glowing UI
 - soft **vignette**, very mild CRT barrel softness at corners
@@ -71,5 +73,5 @@ Applied over the whole frame — this is what makes it feel like a capture of a 
 ## 5. English style block (paste into every prompt)
 
 ```
-Style: late-1980s Japanese cel animation (OVA / TV anime era) as seen in the video game "Orbitals". Cel-shaded characters and mecha with thin coloured ink outlines (dark red-brown or navy, not black), flat base colours with one hard-edged shadow tone and small sharp white highlights; expressive 80s anime faces with large multi-highlight irises and thick eyebrows. Painted gouache-style background with atmospheric depth and volumetric light. Rounded retro-futuristic industrial mecha with pastel armour, rivets, cables and glowing round orange lamps. Faded film-stock colour, lifted blacks, fine film grain, light chromatic aberration on edges, bloom around lights, soft vignette.
+Style: late-1980s Japanese cel animation (OVA / TV anime era) as seen in the video game "Orbitals". Cel-shaded characters and mecha with thin coloured ink outlines (dark red-brown or navy, not black), flat base colours with one hard-edged shadow tone and small sharp white highlights; expressive 80s anime faces with large multi-highlight irises and thick eyebrows. Quiet painted gouache-style background with broad low-detail colour fields, restrained atmospheric depth and subdued distant shapes; keep the hero and overlapping game panels visually dominant. Rounded retro-futuristic industrial mecha with pastel armour, rivets, cables and glowing round orange lamps. Faded film-stock colour, lifted blacks, fine film grain, light chromatic aberration on edges, bloom around lights, soft vignette.
 ```
